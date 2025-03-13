@@ -43,7 +43,7 @@ if filtered_books:
         st.write(f"**{book['title']}** by {book['author']} ({book['year']})")
         if st.button(f"Remove {book['title']}", key=book['title']):
             remove_book(book['title'])
-            st.experimental_rerun()
+            st.rerun()
 else:
     st.write("No books found.")
 
